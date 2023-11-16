@@ -1,17 +1,14 @@
 package com.gildedrose;
 
-public class LegendaryItemWrapper extends NormalItemWrapper {
+public class LegendaryItemWrapper implements ItemWrapper {
+    private final Item item;
+
     LegendaryItemWrapper(Item item) {
-        super(item);
+        this.item = item;
     }
 
     @Override
     public void updateQuality() {
         // do nothing, legendary items never decrease in quality
-    }
-
-    @Override
-    protected void updateSellIn() {
-        // do nothing, legendary items never have to be sold
     }
 }
