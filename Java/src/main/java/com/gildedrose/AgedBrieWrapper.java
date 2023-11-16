@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-public class AgebBrieWrapper extends NormalItemWrapper {
-    AgebBrieWrapper(Item item) {
+public class AgedBrieWrapper extends NormalItemWrapper {
+    AgedBrieWrapper(Item item) {
         super(item);
     }
 
