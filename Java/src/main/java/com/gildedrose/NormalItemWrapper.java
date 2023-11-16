@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class NormalItemWrapper {
+public class NormalItemWrapper implements ItemWrapper {
     private final Item item;
 
     private NormalItemWrapper(Item item) {
