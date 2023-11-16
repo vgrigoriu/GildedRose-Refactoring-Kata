@@ -1,7 +1,7 @@
 package com.gildedrose;
 
 public class NormalItemWrapper implements ItemWrapper {
-    private final Item item;
+    protected final Item item;
 
     NormalItemWrapper(Item item) {
         this.item = item;
