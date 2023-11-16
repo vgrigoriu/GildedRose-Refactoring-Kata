@@ -1,14 +1,14 @@
 package com.gildedrose;
 
-public class ItemWrapper {
+public class NormalItemWrapper {
     private final Item item;
 
-    private ItemWrapper(Item item) {
+    private NormalItemWrapper(Item item) {
         this.item = item;
     }
 
-    public static ItemWrapper of(Item item) {
-        return new ItemWrapper(item);
+    public static NormalItemWrapper of(Item item) {
+        return new NormalItemWrapper(item);
     }
 
     public void updateQuality() {
@@ -65,6 +65,4 @@ public class ItemWrapper {
             item.sellIn = item.sellIn - 1;
         }
     }
-
-
 }

@@ -11,7 +11,7 @@ class GildedRose {
 
     public void updateQuality() {
         Arrays.stream(items)
-            .map(ItemWrapper::of)
-            .forEach(ItemWrapper::updateQuality);
+            .map(NormalItemWrapper::of)
+            .forEach(NormalItemWrapper::updateQuality);
     }
 }
