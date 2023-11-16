@@ -29,15 +29,11 @@ public class NormalItemWrapper implements ItemWrapper {
     }
 
     protected void updateQualityInternal() {
-        if (item.quality > 0) {
-            item.quality = item.quality - 1;
-        }
+        item.quality = item.quality - 1;
     }
 
     protected void updateQualityAfterSellIn() {
-        if (item.quality > 0) {
-            item.quality = item.quality - 1;
-        }
+        item.quality = item.quality - 1;
     }
 
     protected void updateSellIn() {
