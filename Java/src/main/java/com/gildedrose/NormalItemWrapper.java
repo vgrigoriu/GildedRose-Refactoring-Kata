@@ -8,16 +8,24 @@ public class NormalItemWrapper implements ItemWrapper {
     }
 
     public void updateQuality() {
-        if (item.quality > 0) {
-            item.quality = item.quality - 1;
-        }
+        updateQualityInternal();
 
         updateSellIn();
 
         if (item.sellIn < 0) {
-            if (item.quality > 0) {
-                item.quality = item.quality - 1;
-            }
+            updateQualityAfterSellIn();
+        }
+    }
+
+    protected void updateQualityInternal() {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
+        }
+    }
+
+    protected void updateQualityAfterSellIn() {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
         }
     }
 
