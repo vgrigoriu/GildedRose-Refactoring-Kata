@@ -1,7 +1,7 @@
 package com.gildedrose;
 
 public class ItemWrapper {
-    private Item item;
+    private final Item item;
 
     private ItemWrapper(Item item) {
         this.item = item;
