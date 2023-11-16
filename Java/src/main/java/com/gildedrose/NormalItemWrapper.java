@@ -56,7 +56,7 @@ public class NormalItemWrapper implements ItemWrapper {
         }
     }
 
-    private void updateSellIn() {
+    protected void updateSellIn() {
         if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
             item.sellIn = item.sellIn - 1;
         }
