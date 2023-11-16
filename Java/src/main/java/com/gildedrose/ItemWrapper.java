@@ -10,6 +10,9 @@ public interface ItemWrapper {
         if (item.name.equals("Aged Brie")) {
             return new AgedBrieWrapper(item);
         }
+        if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            return new BackstagePassesWrapper(item);
+        }
         return new NormalItemWrapper(item);
     }
 }
