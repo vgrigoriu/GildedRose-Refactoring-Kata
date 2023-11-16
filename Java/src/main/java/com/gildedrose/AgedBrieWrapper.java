@@ -7,14 +7,26 @@ public class AgedBrieWrapper extends NormalItemWrapper {
 
     @Override
     public void updateQuality() {
+        updateQualityInternal();
+
+        updateSellIn();
+
+        if (item.sellIn < 0) {
+            updateQualityAfterSellIn();
+        }
+    }
+
+    @Override
+    protected void updateQualityInternal() {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
         }
-        updateSellIn();
-        if (item.sellIn < 0) {
-            if (item.quality < 50) {
-                item.quality = item.quality + 1;
-            }
+    }
+
+    @Override
+    protected void updateQualityAfterSellIn() {
+        if (item.quality < 50) {
+            item.quality = item.quality + 1;
         }
     }
 }
