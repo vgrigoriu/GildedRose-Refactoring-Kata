@@ -39,9 +39,7 @@ public class ItemWrapper {
             }
         }
 
-        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-            item.sellIn = item.sellIn - 1;
-        }
+        updateSellIn();
 
         if (item.sellIn < 0) {
             if (!item.name.equals("Aged Brie")) {
@@ -61,4 +59,12 @@ public class ItemWrapper {
             }
         }
     }
+
+    private void updateSellIn() {
+        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            item.sellIn = item.sellIn - 1;
+        }
+    }
+
+
 }
