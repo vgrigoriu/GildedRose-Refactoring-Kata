@@ -3,12 +3,8 @@ package com.gildedrose;
 public class NormalItemWrapper implements ItemWrapper {
     private final Item item;
 
-    private NormalItemWrapper(Item item) {
+    NormalItemWrapper(Item item) {
         this.item = item;
-    }
-
-    public static ItemWrapper of(Item item) {
-        return new NormalItemWrapper(item);
     }
 
     public void updateQuality() {
