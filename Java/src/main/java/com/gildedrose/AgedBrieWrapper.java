@@ -9,9 +9,4 @@ public class AgedBrieWrapper extends NormalItemWrapper {
     protected void updateQualityInternal() {
         item.quality = item.quality + 1;
     }
-
-    @Override
-    protected void updateQualityAfterSellIn() {
-        item.quality = item.quality + 1;
-    }
 }

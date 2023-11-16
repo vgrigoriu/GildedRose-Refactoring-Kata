@@ -33,7 +33,7 @@ public class NormalItemWrapper implements ItemWrapper {
     }
 
     protected void updateQualityAfterSellIn() {
-        item.quality = item.quality - 1;
+        updateQualityInternal();
     }
 
     private void updateSellIn() {
