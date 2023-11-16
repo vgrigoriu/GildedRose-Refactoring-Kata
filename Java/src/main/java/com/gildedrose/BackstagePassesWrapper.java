@@ -7,6 +7,17 @@ public class BackstagePassesWrapper extends NormalItemWrapper {
 
     @Override
     public void updateQuality() {
+        updateQualityInternal();
+
+        updateSellIn();
+
+        if (item.sellIn < 0) {
+            updateQualityAfterSellIn();
+        }
+    }
+
+    @Override
+    protected void updateQualityInternal() {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
 
@@ -22,11 +33,10 @@ public class BackstagePassesWrapper extends NormalItemWrapper {
                 }
             }
         }
+    }
 
-        updateSellIn();
-
-        if (item.sellIn < 0) {
-            item.quality = 0;
-        }
+    @Override
+    protected void updateQualityAfterSellIn() {
+        item.quality = 0;
     }
 }
