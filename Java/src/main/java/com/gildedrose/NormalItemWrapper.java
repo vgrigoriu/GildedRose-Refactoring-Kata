@@ -7,7 +7,7 @@ public class NormalItemWrapper implements ItemWrapper {
         this.item = item;
     }
 
-    public static NormalItemWrapper of(Item item) {
+    public static ItemWrapper of(Item item) {
         return new NormalItemWrapper(item);
     }
 
