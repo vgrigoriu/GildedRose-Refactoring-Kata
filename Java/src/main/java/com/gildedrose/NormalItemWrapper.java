@@ -36,7 +36,7 @@ public class NormalItemWrapper implements ItemWrapper {
         item.quality = item.quality - 1;
     }
 
-    protected void updateSellIn() {
+    private void updateSellIn() {
         item.sellIn = item.sellIn - 1;
     }
 }
